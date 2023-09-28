@@ -1,0 +1,19 @@
+h1 {
+    color: rgb(29, 29, 29);
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #4c74af;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 20px;
+}
