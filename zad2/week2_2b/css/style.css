@@ -8,13 +8,17 @@ h1 {
     font-size: 50px;
 }
 
+label {
+    font-size: 50px;
+    font-weight: bold;
+}
 p {
     text-align: center;
     font-size: 30px;
 }
 
 input {
-    width: 96%;
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
