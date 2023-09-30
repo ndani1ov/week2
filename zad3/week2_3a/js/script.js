@@ -1,10 +1,15 @@
-function countNumbers() {
-    var numbersInput = document.getElementById("numbers");
-    var resultElement = document.getElementById("result");
+function calculate() {
+    var input = document.getElementById("numbers").value;
 
-    var numbers = numbersInput.value.split(",");
-    var maxNumber = Math.max(...numbers);
-    var count = numbers.filter(number => number == maxNumber).length;
+    var numbers = input.split(",").map(function(item) {
+      return parseInt(item.trim(), 10);
+    });
 
-    resultElement.innerText = "Количество чисел, равных максимальному: " + count;
-}
+    var maxNumber = Math.max.apply(null, numbers);
+  
+    var count = numbers.filter(function(item) {
+      return item === maxNumber;
+    }).length;
+
+    document.getElementById("result").innerHTML = "Количество чисел, равных максимальному: " + count;
+  }
