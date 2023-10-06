@@ -1,12 +1,15 @@
+function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
 function calculateDays() {
-    var monthNumber = parseInt(document.getElementById("monthInput").value);
-    var days;
+    let monthNumber = parseInt(document.getElementById("monthInput").value);
+    let days;
 
     if(monthNumber > 12)
         document.getElementById("result").innerHTML = "алярм алярм, в году 12 месяцев!!";
     else {
         if (monthNumber == 2) {
-            var year = new Date().getFullYear();
+            let year = new Date().getFullYear();
             if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
                 days = 29;
             } else {
@@ -21,5 +24,3 @@ function calculateDays() {
         document.getElementById("result").innerHTML = "дней в месяце: " + days;
     }
 }
-
-    

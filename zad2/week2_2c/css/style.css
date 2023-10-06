@@ -27,7 +27,7 @@ button {
 }
 
 canvas {
-    border: 1px solid #000;
+    border: 1px solid #000000;
     display: block;
     margin-top: 100px;
 }
