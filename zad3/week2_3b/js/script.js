@@ -1,12 +1,10 @@
-function calculateMedian() {
-    const numbersInput = document.getElementById("numbers");
-    const resultElement = document.getElementById("result");
+const calculateMedian = () => {
+    let numbersInput = document.getElementById("numbers");
+    let resultElement = document.getElementById("result");
 
-    const numbers = numbersInput.value.split(",");
+    let numbers = numbersInput.value.split(",");
     numbers = numbers.map(Number);
-    numbers.sort(function(a, b) {
-        return a - b;
-    });
+    numbers.sort((a, b) => a - b);
 
     let median;
     if (numbers.length % 2 === 0) {
@@ -16,4 +14,4 @@ function calculateMedian() {
     }
 
     resultElement.innerText = "Медиана набора чисел: " + median;
-}
+};

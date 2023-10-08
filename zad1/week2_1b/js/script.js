@@ -1,11 +1,10 @@
-function isLeapYear(year) {
-    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-}
-function calculateDays() {
+const isLeapYear = year => (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+
+const calculateDays = () => {
     let monthNumber = parseInt(document.getElementById("monthInput").value);
     let days;
 
-    if(monthNumber > 12)
+    if (monthNumber > 12)
         document.getElementById("result").innerHTML = "алярм алярм, в году 12 месяцев!!";
     else {
         if (monthNumber == 2) {

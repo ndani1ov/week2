@@ -1,15 +1,15 @@
-function calculate() {
-    const input = document.getElementById("numbers").value;
+const calculate = () => {
+  let input = document.getElementById("numbers").value;
 
-    const numbers = input.split(",").map(function(item) {
-      return parseInt(item.trim(), 10);
-    });
+  let numbers = input.split(",").map((item) => {
+    return parseInt(item.trim(), 10);
+  });
 
-    const maxNumber = Math.max.apply(null, numbers);
-  
-    const count = numbers.filter(function(item) {
-      return item === maxNumber;
-    }).length;
+  let maxNumber = Math.max.apply(null, numbers);
 
-    document.getElementById("result").innerHTML = "Количество чисел, равных максимальному: " + count;
-  }
+  let count = numbers.filter((item) => {
+    return item === maxNumber;
+  }).length;
+
+  document.getElementById("result").innerHTML = "Количество чисел, равных максимальному: " + count;
+};
